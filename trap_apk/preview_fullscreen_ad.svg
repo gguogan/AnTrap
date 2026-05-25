@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="640" viewBox="0 0 360 640">
+  <!-- Fullscreen dark gray background -->
+  <rect x="0" y="0" width="360" height="640" fill="#333333"/>
+
+  <!-- ADVERTISEMENT text centered -->
+  <text x="180" y="320" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle">ADVERTISEMENT</text>
+
+  <!-- Close button (X) - top right -->
+  <rect x="300" y="40" width="44" height="36" rx="4" ry="4" fill="rgba(0,0,0,0.59)"/>
+  <text x="322" y="64" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">&#x2715;</text>
+</svg>

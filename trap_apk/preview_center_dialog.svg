@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="180" viewBox="0 0 300 180">
+  <!-- Dialog white background -->
+  <rect x="0" y="0" width="300" height="180" rx="4" ry="4" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Title - black bold -->
+  <text x="24" y="36" font-family="Arial, sans-serif" font-size="18" fill="#000000" font-weight="bold">Warning</text>
+
+  <!-- Message - dark gray -->
+  <text x="24" y="68" font-family="Arial, sans-serif" font-size="14" fill="#555555">This action cannot be undone.</text>
+  <text x="24" y="88" font-family="Arial, sans-serif" font-size="14" fill="#555555">Are you sure you want to continue?</text>
+
+  <!-- Close button - full width -->
+  <rect x="24" y="116" width="252" height="44" rx="4" ry="4" fill="#e0e0e0"/>
+  <text x="150" y="144" font-family="Arial, sans-serif" font-size="14" fill="#333333" text-anchor="middle" font-weight="bold">Close</text>
+</svg>

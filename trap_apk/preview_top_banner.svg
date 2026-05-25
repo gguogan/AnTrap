@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="107" viewBox="0 0 360 107">
+  <!-- Banner background - semi-opaque dark gray -->
+  <rect x="0" y="0" width="360" height="107" fill="rgba(50,50,50,0.94)"/>
+
+  <!-- Title - white bold -->
+  <text x="20" y="40" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" font-weight="bold">System Update Available</text>
+
+  <!-- Message - slightly transparent white -->
+  <text x="20" y="68" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.78)">A new system update is ready to install.</text>
+  <text x="20" y="90" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.78)">Swipe up to dismiss.</text>
+</svg>

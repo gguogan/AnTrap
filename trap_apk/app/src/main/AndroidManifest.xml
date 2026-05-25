@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="false"
+        android:label="TrapOverlay"
+        android:supportsRtl="true"
+        tools:targetApi="33">
+
+        <!-- Main activity for granting overlay permission manually if needed -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Broadcast receiver: triggered by adb shell am broadcast -->
+        <receiver
+            android:name=".TrapBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.trap.SHOW_POPUP" />
+                <action android:name="com.trap.DISMISS_POPUP" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Overlay service: manages the popup windows -->
+        <service
+            android:name=".TrapOverlayService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
+
+    </application>
+</manifest>

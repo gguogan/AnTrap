@@ -1,0 +1,78 @@
+hydra:
+  searchpath:
+    - file://verl/trainer/config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+algorithm:
+  adv_estimator: grpo
+  norm_adv_by_std_in_grpo: true
+  use_kl_in_reward: false
+
+data:
+  max_prompt_length: 32768
+  max_response_length: 512
+  max_pixels: 1270180
+  min_pixels: 256
+  train_batch_size: 32
+  truncation: right
+  shuffle: false
+  trust_remote_code: true
+
+actor_rollout_ref:
+  hybrid_engine: true
+  model:
+    path: ${ACTOR_MODEL_PATH}
+    use_remove_padding: true
+    enable_gradient_checkpointing: true
+  actor:
+    strategy: fsdp2
+    optim:
+      lr: 1e-6
+    ppo_mini_batch_size: 32
+    ppo_micro_batch_size_per_gpu: 1
+    fsdp_config:
+      model_dtype: bf16
+      param_offload: false
+      optimizer_offload: false
+    use_kl_loss: true
+    kl_loss_coef: 0.01
+    kl_loss_type: low_var_kl
+    checkpoint:
+      save_contents: "['hf_model']"
+  rollout:
+    name: vllm
+    n: 1
+    tensor_model_parallel_size: 1
+    gpu_memory_utilization: 0.6
+    enable_chunked_prefill: false
+    log_prob_micro_batch_size_per_gpu: 4
+  ref:
+    fsdp_config:
+      param_offload: true
+    log_prob_micro_batch_size_per_gpu: 4
+
+critic:
+  enable: false
+
+env:
+  max_steps: 16
+  num_envs: 8
+  trajectories_per_task: 8         # GRPO group size; with num_envs=8 this means 1 unique task per outer step, 8 trajectories per group
+  reward_discount: 1.0
+  server_url: "http://localhost:29101"
+  mode: origin
+
+trainer:
+  project_name: android_grpo
+  experiment_name: uitars_7b_origin_grpo
+  logger: '["console", "wandb"]'
+  n_gpus_per_node: 8
+  nnodes: 1
+  save_freq: 10
+  test_freq: 5
+  total_epochs: 10
+  val_before_train: false
+  critic_warmup: 0

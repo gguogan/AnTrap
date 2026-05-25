@@ -1,0 +1,19 @@
+# Server dependencies
+fastapi
+uvicorn[standard]
+pydantic
+
+# Android World dependencies
+android_env==1.2.3
+dm_env==1.6
+fuzzywuzzy==0.18.0
+grpcio-tools
+protobuf
+immutabledict==2.0.0
+numpy<2.0
+opencv-python-headless
+pydub
+python-Levenshtein
+tenacity
+termcolor
+lxml

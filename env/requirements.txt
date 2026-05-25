@@ -1,0 +1,28 @@
+# Core LLM dependencies
+matplotlib
+xmltodict
+Levenshtein
+lxml
+openpyxl
+accelerate==1.4.0
+datasets>=3.2.0
+vllm==0.8.4
+peft==0.15.2
+safetensors>=0.3.3
+transformers==4.51.3
+trl==0.17.0
+optree>=0.13.0
+
+# Agent environment dependencies
+android_env==1.2.3
+dm_env==1.6
+fuzzywuzzy==0.18.0
+google-generativeai
+grpcio-tools
+protobuf
+immutabledict==2.0.0
+
+pydub
+python-Levenshtein
+tenacity
+termcolor

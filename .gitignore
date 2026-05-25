@@ -1,0 +1,36 @@
+# Python
+*.pyc
+__pycache__/
+.cache/
+
+# Packaging
+/*.egg-info
+.eggs/
+build/
+dist/
+poetry.lock
+
+# Tests / type checking
+.pytest_cache/
+.pytype/
+
+# OS
+*.DS_Store
+
+# Editors / IDE
+.idea/
+.vscode/
+.claude/
+
+# Logs and trajectories (not tracked)
+log/
+trajectory/
+
+# Android build artifacts
+trap_apk/.gradle/
+trap_apk/local.properties
+trap_apk/app/build/
+
+# Secrets (commit `.env.example` instead)
+.env
+.env.local

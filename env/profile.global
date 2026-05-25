@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# 容器内通用 shell 初始化
+umask 022
+
+# 提示符
+if [ -n "$BASH" ]; then
+    PS1='\u@\h:\w\$ '
+    export PS1
+fi
+
+# 加载系统 bashrc
+if [ -n "$BASH" ] && [ "$BASH" != "/bin/sh" ]; then
+    if [ -f /etc/bash.bashrc ]; then
+        . /etc/bash.bashrc
+    elif [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+    fi
+fi
+
+# 加载用户本地 profile（如果存在）
+if [ -f "$HOME/.profile.local" ]; then
+    . "$HOME/.profile.local"
+fi
