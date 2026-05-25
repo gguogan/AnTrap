@@ -34,7 +34,19 @@ From the repo root (so the workspace mount lines up):
 bash env/aw_docker_run.sh
 ```
 
-### 1.4 API keys
+### 1.4 Set up emulators
+
+Inside the container, duplicate the base AVD and launch the emulator pool
+(installs `trap.apk` and verifies network reachability automatically):
+
+```bash
+bash setup_emulators.sh           # default: 10 emulators (8 workers + 2 spares)
+N=8 bash setup_emulators.sh       # custom count
+bash setup_emulators.sh copy      # only duplicate AVDs
+bash setup_emulators.sh launch    # only launch (assumes AVDs already copied)
+```
+
+### 1.5 API keys
 
 Copy `.env.example` to `.env` and fill in the keys you need for gpt/claude/gemini:
 

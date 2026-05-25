@@ -10,14 +10,14 @@ set -e
 PORT="${PORT:-29101}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-echo "=== Step 1: Starting 8 emulators ==="
-# Reuse existing emulator startup script if available
-if [ -f /app/start_8_emulators.sh ]; then
-    bash /app/start_8_emulators.sh
-elif [ -f "$SCRIPT_DIR/../../../../androidworld_test/start_8_emulators.sh" ]; then
-    bash "$SCRIPT_DIR/../../../../androidworld_test/start_8_emulators.sh"
+echo "=== Step 1: Starting emulators ==="
+# Reuse existing emulator setup script if available
+if [ -f /app/setup_emulators.sh ]; then
+    bash /app/setup_emulators.sh
+elif [ -f "$SCRIPT_DIR/../../../../setup_emulators.sh" ]; then
+    bash "$SCRIPT_DIR/../../../../setup_emulators.sh"
 else
-    echo "WARNING: start_8_emulators.sh not found. Assuming emulators are already running."
+    echo "WARNING: setup_emulators.sh not found. Assuming emulators are already running."
 fi
 
 echo ""
