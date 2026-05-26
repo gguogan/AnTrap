@@ -2,8 +2,8 @@
 # Launch GRPO training on standard (origin) AndroidWorld environment.
 #
 # Prerequisites:
-#   1. Remote server running on cclab232 (port 29101)
-#   2. SSH tunnel active (localhost:29101 → cclab232:29101)
+#   1. Remote emulator server running (default port 29101)
+#   2. SSH tunnel active (localhost:29101 -> remote:29101)
 #   3. conda activate verl
 
 set -x
