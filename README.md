@@ -93,7 +93,7 @@ TRAP_CATEGORY=a_layer TRAP_TYPE=grounding_error TRAP_PROBABILITY=0.16 \
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `TRAP_CATEGORY` | `none` | `s_layer` / `t_layer` / `a_layer` / `overall` / `none` |
+| `TRAP_CATEGORY` (overall = round) | `none` | `s_layer` / `t_layer` / `a_layer` / `overall` / `none` |
 | `TRAP_TYPE` | `none` | sub-type within the category, or `random` |
 | `TRAP_PROBABILITY` | `0.16` | per-step trigger probability |
 | `MAX_TRAPS` | `0` | per-episode cap (`1` = exactly one trap per reported episode) |
