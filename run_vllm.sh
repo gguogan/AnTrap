@@ -2,7 +2,7 @@ CKPT="/root/.cache/modelscope/UI-TARS-1.5-7B"
 
 # Argument tweaks
 PIXEL_ARGS='{"min_pixels":3136,"max_pixels":3211264}'
-IMAGE_LIMIT_ARGS="image=5"  # Use key=value form (no braces/quotes)
+IMAGE_LIMIT_ARGS="image=8"  # Use key=value form (no braces/quotes)
 MP_SIZE=4
 
 echo "Launching the vLLM multimodal inference service..."

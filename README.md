@@ -100,7 +100,7 @@ TRAP_CATEGORY=a_layer TRAP_TYPE=grounding_error TRAP_PROBABILITY=0.16 \
 | `TRAP_SEED` | `42` | RNG seed |
 | `MODEL` / `NUM_WORKERS` / `BASE_URL` | see §2 | same semantics as origin runners |
 
-Valid `TRAP_TYPE` values per category:
+Valid `TRAP_TYPE` values per category (overall = round):
 
 * `s_layer`: `visual_obscuration`, `external_interruption`
 * `t_layer`: `temporal_conflict`, `visual_hallucination`
