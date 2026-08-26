@@ -5,7 +5,7 @@
         <img src="https://img.shields.io/badge/PRs-Welcome-red">
     </a>
     <a href="https://img.shields.io/badge/last%20commit-2026--08--26-green">
-        <img src="https://img.shields.io/badge/last%20commit-2026--05--26-green">
+        <img src="https://img.shields.io/badge/last%20commit-2026--08--26-green">
     </a>
     <a href="https://opensource.org/licenses/Apache-2.0">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
