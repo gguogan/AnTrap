@@ -42,7 +42,7 @@ AnTrap extends <a href="https://github.com/google-research/android_world">Androi
   <img src="./assets/image.png" alt="AnTrap overview: original environment, trap construction, and diversity settings" width="900">
 </p>
 
-AnTrap turns a general AndroidWorld environment into a controllable robustness benchmark:
+AnTrap turns a general AndroidWorld environment into a controllable robustness benchmark.
 
 ---
 
