@@ -1,4 +1,8 @@
-<h1 align="center">AnTrap</h1>
+<h1 align="center">
+  AnTrap<br>
+  <sub>Are Android GUI Agents Robust Against Runtime Anomalies?<br>
+  Evaluating Agents in Dynamic Adversarial Environments</sub>
+</h1>
 
 <p align="center">
     <a href="https://img.shields.io/badge/PRs-Welcome-red">
